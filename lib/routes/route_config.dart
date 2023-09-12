@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mobx_demo/routes/route_constant.dart';
 import 'package:mobx_demo/screens/form/form_screen.dart';
+import 'package:mobx_demo/screens/form/week_day_screen.dart';
 
 import '../screens/album/album_photo_screen.dart';
 import '../screens/login_screen.dart';
@@ -12,7 +13,7 @@ import '../screens/posts/post_screen.dart';
 // final _shellNavigatorKey = GlobalKey<NavigatorState>();
 
 class AppRouter {
-  GoRouter router = GoRouter(initialLocation: '/', routes: [
+  GoRouter router = GoRouter(initialLocation: '/week-day', routes: [
     // ShellRoute(
     //     navigatorKey: _shellNavigatorKey,
     //     builder: (context,state,child){
@@ -41,18 +42,25 @@ class AppRouter {
     //     ]),
     GoRoute(
       name: AppRouteConstant.formScreen,
-      path: '/',
+      path: '/form-screen',
       pageBuilder: (context, state) {
         return const MaterialPage(child: FormScreen());
       },
     ),
-    // GoRoute(
-    //   name: AppRouteConstant.loginScreen,
-    //   path: '/',
-    //   pageBuilder: (context, state) {
-    //     return const MaterialPage(child: LoginScreen());
-    //   },
-    // ),
+    GoRoute(
+      name: AppRouteConstant.weekDayScreen,
+      path: '/week-day',
+      pageBuilder: (context, state) {
+        return const MaterialPage(child: WeekDayScreen());
+      },
+    ),
+    GoRoute(
+      name: AppRouteConstant.loginScreen,
+      path: '/',
+      pageBuilder: (context, state) {
+        return const MaterialPage(child: LoginScreen());
+      },
+    ),
     GoRoute(
       name: AppRouteConstant.mainScreen,
       path: '/main/:id',

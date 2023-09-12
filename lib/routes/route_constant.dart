@@ -7,4 +7,5 @@ class AppRouteConstant {
   static const String todoListScreen = 'TodoListScreen';
   static const String photoListScreen = 'PhotoListScreen';
   static const String formScreen = 'FormScreen';
+  static const String weekDayScreen = 'WeekDayScreen';
 }
