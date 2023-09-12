@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mobx_demo/routes/route_constant.dart';
+import 'package:mobx_demo/screens/form/form_screen.dart';
 
 import '../screens/album/album_photo_screen.dart';
 import '../screens/login_screen.dart';
@@ -39,12 +40,19 @@ class AppRouter {
     //           }),
     //     ]),
     GoRoute(
-      name: AppRouteConstant.loginScreen,
+      name: AppRouteConstant.formScreen,
       path: '/',
       pageBuilder: (context, state) {
-        return const MaterialPage(child: LoginScreen());
+        return const MaterialPage(child: FormScreen());
       },
     ),
+    // GoRoute(
+    //   name: AppRouteConstant.loginScreen,
+    //   path: '/',
+    //   pageBuilder: (context, state) {
+    //     return const MaterialPage(child: LoginScreen());
+    //   },
+    // ),
     GoRoute(
       name: AppRouteConstant.mainScreen,
       path: '/main/:id',

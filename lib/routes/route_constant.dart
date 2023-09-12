@@ -1,4 +1,4 @@
-class AppRouteConstant{
+class AppRouteConstant {
   static const String loginScreen = 'LoginScreen';
   static const String mainScreen = 'MainScreen';
   static const String postListScreen = 'PostListScreen';
@@ -6,4 +6,5 @@ class AppRouteConstant{
   static const String albumScreen = 'AlbumScreen';
   static const String todoListScreen = 'TodoListScreen';
   static const String photoListScreen = 'PhotoListScreen';
+  static const String formScreen = 'FormScreen';
 }
